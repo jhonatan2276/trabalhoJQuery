@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Trabalho Final</title>
+    <!-- JQuery -->
+    <script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+    <!-- JQuery UI -->
+    <link rel="stylesheet" type="text/css" href="javascript/jquery-ui/jquery-ui.min.css">
+    <script type="text/javascript" src="javascript/jquery-ui/jquery-ui.min.js"></script>
+    <!-- PLUGIN JQuery - Carousel (Slick) -->
+    <link rel="stylesheet" type="text/css" href="javascript/carrousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="javascript/carrousel/slick/slick-theme.css">
+    <script type="text/javascript" src="javascript/carrousel/slick/slick.min.js"></script>
+    <!-- PLUGIN JQuery - Menu (Smartmenus) -->
+    <link href="javascript/smartmenus/css/sm-core-css.css" rel="stylesheet" type="text/css">
+    <link href="javascript/smartmenus/css/sm-simple/sm-simple.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="javascript/smartmenus/jquery.smartmenus.js"></script>
+    <!-- PLUGIN JQuery - Galeria de Imagens (Images Grid) -->
+    <link rel="stylesheet" href="javascript/images-grid/src/images-grid.css">
+    <script src="javascript/images-grid/src/images-grid.js"></script>
+    <!-- PLUGIN JQuery - Validador de Formulários (JQuery Validation) -->
+    <script type="text/javascript" src="javascript/jquery-validation/dist/jquery.validate.min.js"></script>
+    <!-- PLUGIN JQUERY - Máscara (JQuery Mask Plugin) -->
+    <script type="text/javascript" src="javascript/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <!-- FRAMEWORK CSS - (Bulma) -->
+    <link rel="stylesheet" type="text/css" href="estilos/bulma/css/bulma.css">
+    <!-- CSS e Javascript da página -->
+    <link rel="stylesheet" type="text/css" href="estilos/geral.css">
+    <script type="text/javascript" src="javascript/geral.js"></script>
+</head>
+<body>
+    <div id="centraliza">
+        <div id="geral">
+            <div id="topoPagina">
+               <img src="imagens/logo-unidavi.png" id="logoTopo">
+            </div>        
+  
+            <nav id="main-nav" role="navigation">
+                <ul id="main-menu" class="sm sm-simple">
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="#">Produtos</a>
+                        <ul>
+                            <li><a href="#">Perecíveis</a></li>
+                            <li><a href="#">Não Perecíveis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="cad">Cadastro</a></li>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div id="banner" class="banner slider">
+                <div><img src="imagens/banner-01.png"></div>
+                <div><img src="imagens/banner-02.png"></div>
+                <div><img src="imagens/banner-03.png"></div>
+            </div>
+            
+            <div id="abas">
+                <ul>
+                    <li><a href="#aba01">Cadastro</a></li>
+                    <li><a href="#aba02">Galeria de Imagens</a></li>
+                    <li><a href="#aba03">Componentes Utilizados</a></li>
+                </ul>
+                <div id="aba01">
+                    <form method="POST" action="" id="formulario">
+                        <div class="columns">
+                            <div class="column">
+                                <label class="label">Nome:</label>
+                                <input type="text" name="nome" id="nome" class="input is-info">
+                            </div>
+                            <div class="column">
+                                <label class="label">Email:</label> 
+                                <input type="text" name="email" id="email" class="input is-info" placeholder="exemplo@exemplo,com">
+                            </div>
+                        </div>
+                        <div class="columns"> 
+                            <div class="column is-3">
+                                <label class="label">Telefone (8 ou 9 digitos):</label>
+                                <input type="text" name="telefone" id="telefone" class="input is-info" placeholder="(00)0000[0]-0000">
+                            </div>
+                            <div class="column is-2">
+                                <label class="label">Data Nascimento:</label>
+                                <input type="text" name="dataNascimento" id="dataNascimento" class="input is-info" placeholder="01/01/2017">
+                            </div>
+                            <div class="column is-3">
+                                <label class="label">CEP:</label>
+                                <input type="text" name="cep" id="cep" class="input is-info" placeholder="00000-000">
+                            </div>
+                            <div class="column is-3">                               
+                                <label class="label">Cidade:</label>
+                                <input type="text" name="cidade" id="cidade" class="input is-info teste" readonly>
+                            </div>
+                            <div class="column">
+                                <label class="label">Estado:</label>
+                                <input type="text" name="estado" id="estado" class="input is-info" readonly>  
+                            </div>
+                        </div>
+                        <div class="columns"> 
+                            <div class="column is-half">
+                                <label class="label">Rua:</label>
+                                <input type="text" name="rua" id="rua" class="input is-info" readonly>
+                            </div>
+                            <div class="column">
+                                <label class="label">Bairro:</label>
+                                <input type="text" name="bairro" id="bairro" class="input is-info" readonly>    
+                            </div>
+                            <div class="column is-2">
+                                <label class="label">Número:</label>
+                                <input type="text" name="numero" id="numero" class="input is-info">
+                            </div>
+                        </div>
+                        <input type="submit" value="Enviar" id="btEnviar" class="ui-button ui-widget ui-corner-all">
+                        <input type="reset" value="Limpar" class="ui-button ui-widget ui-corner-all" id="limpars">
+                    </form>
+                </div> <!-- FIM aba01 -->
+                 
+                <div id="aba02">
+                    <label class="label" style="text-align: center;">Galeria de Imagens</label>
+                    <div id="galeria"></div>   
+                </div> <!-- FIM aba02 -->
+  
+                <div id="aba03">
+                    <ul>
+                        <li>* JQuery</li>
+                        <li>* JQuery UI</li>
+                        <li>* Slick (PLUGIN JQUERY - Carousel)</li>
+                        <li>* Smartmenus (PLUGIN JQUERY - Menu Drop Down)</li>
+                        <li>* Images Grid (PLUGIN JQUERY - Galeria de Imagens)</li>
+                        <li>* JQuery Validation  (PLUGIN JQUERY - Validador de Formulários)</li>
+                        <li>* JQuery Mask Plugin (PLUGIN JQUERY - Máscara nos Campos)</li>
+                        <li>* Bulma CSS (Apenas para layout dos campos)</li>  
+                    </ul>
+                </div> <!-- FIM aba03 -->
+            </div> <!-- FIM abas -->
+        </div> <!-- FIM DA DIV GERAL -->
+    </div> <!-- FIM DA DIV CENTRALIZA --> 
+    
+    <!--Botão Voltar ao Topo -->
+    <span class="topo" title="Voltar ao Topo"></span>    
+</body>
+</html>
