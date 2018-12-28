@@ -1,4 +1,4 @@
 ## Jhonatan William Voltolini
 
 ## Observações:
-- Trabalho final da Disciplina de JQuery.
+- Trabalho Final da Disciplina de JQuery.
